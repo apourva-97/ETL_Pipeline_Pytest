@@ -1,0 +1,11 @@
+ID,Name,Email,DateOfBirth,Age,Country,PhoneNumber,SignupDate,IsActive
+1,John Doe,john.doe@example.com,1990-05-14,34.0,USA,+1-202-555-0125,2023-03-01,TRUE
+2,Jane Smith,jane.smith@domain,1985-11-30,39.0,Canada,1234567890,2022-12-15,FALSE
+3,Bob Johnson,bob.johnson@example.com,2003-07-25,21.0,UK,+44 20 7946 0958,2021-05-12,TRUE
+4,,invalid.email.com,1975-02-20,49.0,,+91-9876543210,2020-07-20,TRUE
+5,Anna Lee,anna.lee@example.com,2010-10-10,14.0,Australia,+61-2-1234-5678,2023-09-30,TRUE
+6,Mike Chan,mikechan@site.com,2001-01-01,,China,555-0000,2023-01-01,FALSE
+7,Sara Kim,sara.kim@example.com,1999-03-15,25.0,South Korea,+82-2-312-3456,invalid_date,TRUE
+8,Tom O'Brien,tom.obrien@example.com,1998-09-09,26.0,Ireland,,2022-04-04,yes
+9,Lucy Lee,lucy.lee@example.,1987-06-06,37.0,USA,+1-202-555-0155,2021-11-11,FALSE
+10,James Wu,james.wu@example.com,1980-12-01,43.0,China,+86 10 1234 5678,2024-06-06,FALSE

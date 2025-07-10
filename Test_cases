@@ -1,0 +1,50 @@
+| TC\_ID | Description | Input | Expected Result | Pass/Fail Criteria |
+| ------ | ----------- | ----- | --------------- | ------------------ |
+
+| TC\_ID | Description                   | Input                  | Expected Result | Pass/Fail Criteria         |
+| ------ | ----------------------------- | ---------------------- | --------------- | -------------------------- |
+| TC\_01 | Valid email                   | `john.doe@example.com` | Valid           | Pass if email passes regex |
+| TC\_02 | Invalid email (no TLD)        | `jane.smith@domain`    | Invalid         | Fail if accepted           |
+| TC\_03 | Invalid email (missing @)     | `invalid.email.com`    | Invalid         | Fail if accepted           |
+| TC\_04 | Invalid email (ends with dot) | `lucy.lee@example.`    | Invalid         | Fail if accepted           |
+
+
+| TC\_ID | Description                          | Input                          | Expected Result         | Pass/Fail Criteria                           |
+| ------ | ------------------------------------ | ------------------------------ | ----------------------- | -------------------------------------------- |
+| TC\_05 | Age matches DOB (1990-05-14, age 34) | DOB: `1990-05-14`, Age: `34`   | Valid                   | Pass if current year calculation is accurate |
+| TC\_06 | Missing age                          | DOB: `2001-01-01`, Age: `NULL` | Should recalculate      | Pass if age is calculated as 24              |
+| TC\_07 | Age-DOB mismatch                     | DOB: `2010-10-10`, Age: `14`   | Depends on current date | Fail if mismatch exists                      |
+| TC\_08 | Valid date but incorrect format      | `invalid_date`                 | Invalid                 | Fail if not parsed                           |
+
+
+| TC\_ID | Description                | Input               | Expected Result | Pass/Fail Criteria |
+| ------ | -------------------------- | ------------------- | --------------- | ------------------ |
+| TC\_09 | Name is NULL               | Name: `NULL`        | Invalid         | Fail if accepted   |
+| TC\_10 | Valid name with apostrophe | Name: `Tom O'Brien` | Valid           | Pass if no error   |
+
+
+| TC\_ID | Description     | Input              | Expected Result | Pass/Fail Criteria |
+| ------ | --------------- | ------------------ | --------------- | ------------------ |
+| TC\_11 | Country is NULL | Country: `NULL`    | Invalid         | Fail if accepted   |
+| TC\_12 | Valid country   | Country: `Ireland` | Valid           | Pass               |
+
+
+| TC\_ID | Description                   | Input             | Expected Result | Pass/Fail Criteria      |
+| ------ | ----------------------------- | ----------------- | --------------- | ----------------------- |
+| TC\_13 | Valid international format    | `+1-202-555-0125` | Valid           | Pass if pattern matches |
+| TC\_14 | Local number format (invalid) | `1234567890`      | Invalid         | Fail if accepted        |
+| TC\_15 | Invalid short number          | `555-0000`        | Invalid         | Fail if accepted        |
+| TC\_16 | NULL phone                    | `NULL`            | Invalid         | Fail if accepted        |
+
+
+| TC\_ID | Description         | Input          | Expected Result | Pass/Fail Criteria |
+| ------ | ------------------- | -------------- | --------------- | ------------------ |
+| TC\_17 | Valid signup date   | `2023-03-01`   | Valid           | Pass               |
+| TC\_18 | Invalid date format | `invalid_date` | Invalid         | Fail if accepted   |
+
+
+| TC\_ID | Description           | Input   | Expected Result | Pass/Fail Criteria |
+| ------ | --------------------- | ------- | --------------- | ------------------ |
+| TC\_19 | Valid boolean TRUE    | `TRUE`  | Valid           | Pass               |
+| TC\_20 | Valid boolean FALSE   | `FALSE` | Valid           | Pass               |
+| TC\_21 | Invalid boolean (yes) | `yes`   | Invalid         | Fail if accepted   |
