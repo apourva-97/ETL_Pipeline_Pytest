@@ -120,6 +120,16 @@ try:
         #print(df_age)
         assert df_age.empty,"Some incorrect ages are present in data"
 
+    def test_frame_check(df_csv, df_SQL):
+        df_csv['DateOfBirth'] = df_csv['DateOfBirth'].astype(str)
+        df_SQL['DateOfBirth'] = df_SQL['DateOfBirth'].astype(str)
+
+        pd.testing.assert_frame_equal(
+    df_csv.reset_index(drop=True),
+    df_SQL.reset_index(drop=True),
+    check_dtype=False
+)
+
 
 
     '''
